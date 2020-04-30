@@ -2,7 +2,7 @@
 
 Acessivel em [makrosystem-advertising](https://rodrigofelipejr.github.io/makrosystem-advertising/)
 
-## Conteúdo que foi estudado
+### Conteúdo que foi estudado
 
 - https://daneden.github.io/animate.css/
 - https://github.com/daneden/animate.css
