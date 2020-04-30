@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+html,
+body {
+    height: 100mv;
+    width: 100vw;
+    background-color: #f6d743;
+}
+
+.inline-rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 250px;
+    background-color: #002f87;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* elemento 1 */
+
+#s1 p,
+#s2 p {
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    line-height: 1em;
+    text-align: center;
+}
+
+#s1 p:last-of-type,
+#s2 p:last-of-type {
+    position: relative;
+}
+
+#s1 p:last-of-type::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #00c08b;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-fill-mode: forwards;
+}
+
+#s1.fillText p:last-of-type::before {
+    animation-name: fillText;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.bounceOutLeft2s {
+    -webkit-animation-name: bounceOutLeft;
+    animation-name: bounceOutLeft;
+    animation-delay: 750ms;
+}
+
+/* elemento 2 */
+
+#s2 {
+    /* display: none; */
+}
+
+#s2 p:last-of-type {
+    color: #00c08b;
+}
+
+#s2 p:last-of-type::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-fill-mode: forwards;
+}
+
+#s2.fillTextReverse p:last-of-type::before {
+    animation-name: fillTextReverse;
+    animation-duration: 750ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+
+.bounceOut2s {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceOut;
+    animation-name: bounceOut;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* elemento 3 */
+
+#logo {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+}
+
+#logo.logoToCenter {
+    animation-name: logoToCenter;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logoToCenter {
+    from {
+        width: 50px;
+        bottom: 1em;
+    }
+    to {
+        width: 125px;
+        bottom: 50%;
+        transform: translate(-50%, 30%);
+    }
+}
+
+#s3 {
+    margin-bottom: 2em;
+    align-self: flex-end;
+}
+
+#s3 p {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+@keyframes fillText {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fillTextReverse {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.hideEnd {
+    animation-name: hideEnd;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes hideEnd {
+    from {
+        display: flex;
+    }
+    to {
+        display: none !important;
+    }
+}
