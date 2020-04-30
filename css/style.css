@@ -72,7 +72,7 @@ body {
 .bounceOutLeft2s {
     -webkit-animation-name: bounceOutLeft;
     animation-name: bounceOutLeft;
-    animation-delay: 750ms;
+    /* animation-delay: 750ms; */
 }
 
 /* elemento 2 */
@@ -122,6 +122,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 50px;
+}
+
+#logo.show {
+    display: block;
 }
 
 #logo.logoToCenter {
@@ -186,5 +190,21 @@ body {
     }
     to {
         display: none !important;
+    }
+}
+
+.fadeOut0 {
+    -webkit-animation-name: fadeOut0;
+    animation-name: fadeOut0;
+    animation-duration: 0ms;
+}
+
+@keyframes fadeOut0 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0;
     }
 }
