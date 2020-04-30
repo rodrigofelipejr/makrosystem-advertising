@@ -1,4 +1,9 @@
+/* ===================================== */
+/* default */
+/* ===================================== */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -10,12 +15,11 @@
 
 html,
 body {
-    height: 100mv;
+    height: 100vh;
     width: 100vw;
-    background-color: #f6d743;
 }
 
-.inline-rectangle {
+.wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,7 +37,13 @@ body {
     display: none !important;
 }
 
-/* elemento 1 */
+.show {
+    display: block !important;
+}
+
+/* ===================================== */
+/*  */
+/* ===================================== */
 
 #s1 p,
 #s2 p {
@@ -50,6 +60,9 @@ body {
     position: relative;
 }
 
+/* ===================================== */
+/* elemento 1 */
+/* ===================================== */
 #s1 p:last-of-type::before {
     position: absolute;
     content: attr(data-text);
@@ -75,12 +88,9 @@ body {
     /* animation-delay: 750ms; */
 }
 
+/* ===================================== */
 /* elemento 2 */
-
-#s2 {
-    /* display: none; */
-}
-
+/* ===================================== */
 #s2 p:last-of-type {
     color: #00c08b;
 }
@@ -114,18 +124,12 @@ body {
     animation-fill-mode: forwards;
 }
 
-/* elemento 3 */
-
 #logo {
     position: absolute;
     bottom: 1em;
     left: 50%;
     transform: translateX(-50%);
     width: 50px;
-}
-
-#logo.show {
-    display: block;
 }
 
 #logo.logoToCenter {
@@ -135,27 +139,54 @@ body {
     animation-fill-mode: forwards;
 }
 
-@keyframes logoToCenter {
-    from {
-        width: 50px;
-        bottom: 1em;
-    }
-    to {
-        width: 125px;
-        bottom: 50%;
-        transform: translate(-50%, 30%);
-    }
-}
-
+/* ===================================== */
+/* elemento 3 */
+/* ===================================== */
 #s3 {
-    margin-bottom: 2em;
-    align-self: flex-end;
+    margin-top: 1em;
+    align-self: center;
 }
 
 #s3 p {
     font-size: 1.4em;
     line-height: 1.2em;
     text-align: center;
+}
+
+#link {
+    position: absolute;
+    bottom: 10%;
+    padding: 0.8em 1.2em;
+    background-color: #ffffff;
+    color: #00c08b;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+/* ===================================== */
+/* animations */
+/* ===================================== */
+.hideEnd {
+    animation-name: hideEnd;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.fadeOutLeft {
+    animation-delay: 1s;
+}
+
+@keyframes hideEnd {
+    from {
+        display: flex;
+    }
+    to {
+        display: none !important;
+    }
 }
 
 @keyframes fillText {
@@ -176,35 +207,14 @@ body {
     }
 }
 
-.hideEnd {
-    animation-name: hideEnd;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-
-@keyframes hideEnd {
+@keyframes logoToCenter {
     from {
-        display: flex;
+        width: 50px;
+        bottom: 1em;
     }
     to {
-        display: none !important;
-    }
-}
-
-.fadeOut0 {
-    -webkit-animation-name: fadeOut0;
-    animation-name: fadeOut0;
-    animation-duration: 0ms;
-}
-
-@keyframes fadeOut0 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0;
+        width: 75px;
+        bottom: 72%;
+        transform: translate(-50%, 30%);
     }
 }

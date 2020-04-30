@@ -9,7 +9,7 @@ const animate2 = () => {
 }
 
 const animate3 = () => {
-    animateCSS('#s1', ['fadeOutLeft'], animate4, ['hide'])
+    animateCSS('#s1', ['fillText', 'fadeOutLeft'], animate4, ['hide'])
 }
 
 // step 2
@@ -22,19 +22,30 @@ const animate5 = () => {
 }
 
 const animate6 = () => {
-    animateCSS('#s2', ['fillTextReverse', 'bounceOut2s'], animate8, ['hide'])
+    animateCSS('#s2', ['fillTextReverse', 'bounceOut2s'], animate7, ['hide'])
 }
 
 // step 3
+const animate7 = () => {
+    animateCSS('#logo', ['logoToCenter'], animate8, ['logoToCenter'])
+}
+
 const animate8 = () => {
-    animateCSS('#logo', ['logoToCenter'], null, ['logoToCenter'])
-    animateCSS('#s3', ['slideInUp'], endAnimation, ['fadeInUp'])
+    animateCSS('#s3', ['fadeInUp'], animate9, ['fadeInUp'])
+}
+
+const animate9 = () => {
+    animateCSS('#link', ['fadeIn'], animate10, ['fadeIn'])
+}
+
+const animate10 = () => {
+    animateCSS('#link', ['swing'], finish)
 }
 
 function animateCSS(element, animationName, callback, fixClass) {
     const node = document.querySelector(element)
 
-    node.classList.remove('hide')
+    node.removeAttribute('class')
     node.classList.add('animated', ...animationName)
 
     function handleAnimationEnd() {
@@ -51,14 +62,9 @@ function animateCSS(element, animationName, callback, fixClass) {
     node.addEventListener('animationend', handleAnimationEnd)
 }
 
-function hideElements(element, fixClass) {
-    const node = document.querySelector(element)
-    node.removeAttribute('class')
-    node.setAttribute('class', ...fixClass)
-}
-
-function endAnimation() {
-    const nodes = document.querySelectorAll('.inline-rectangle > div, #logo')
+function finish() {
+    console.log('end');
+    const nodes = document.querySelectorAll('.wrapper > div, #logo, #link')
     setTimeout(function () {
         nodes.forEach(elem => {
             elem.removeAttribute('class')
@@ -66,7 +72,6 @@ function endAnimation() {
         })
         setTimeout(animate1(), 1000)
     }, 3000)
-
 }
 
 document.addEventListener('DOMContentLoaded', function () {

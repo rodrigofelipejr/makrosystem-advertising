@@ -12,3 +12,12 @@ Acessivel em [makrosystem-advertising](https://rodrigofelipejr.github.io/makrosy
 - https://javascript.info/css-animations
 - https://css-tricks.com/controlling-css-animations-transitions-javascript/
 - https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
+
+### Resoluções
+
+- 728x90
+- 468x60
+- 970x90
+- 300x250      OK
+- 320x100
+- 300x600
