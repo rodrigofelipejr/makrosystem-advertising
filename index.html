@@ -6,11 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>root</title>
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .wrapper {
       display: grid;
       grid-template-columns: 1fr 320px;
       grid-template-rows: 1fr auto;
       gap: 20px 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .col1 {
@@ -37,36 +51,38 @@
 </head>
 
 <body>
-  <div class="col1">
-    <iframe width="970" height="90" src="./970x90/index.html" scrolling="no" marginwidth="0" marginheight="0"
-      frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
-      sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+  <div class="wrapper">
+    <div class="col1">
+      <iframe width="970" height="90" src="./970x90/index.html" scrolling="no" marginwidth="0" marginheight="0"
+        frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+    </div>
+
+    <div class="col2">
+      <iframe width="320" height="100" src="./320x100/index.html" scrolling="no" marginwidth="0" marginheight="0"
+        frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+
+      <iframe width="468" height="60" src="./468x60/index.html" scrolling="no" marginwidth="0" marginheight="0"
+        frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+
+      <iframe width="728" height="90" src="./728x90/index.html" scrolling="no" marginwidth="0" marginheight="0"
+        frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+    </div>
+
+    <div class="col3">
+      <iframe width="300" height="250" src="./300x250/index.html" scrolling="no" marginwidth="0" marginheight="0"
+        frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+
+      <iframe width="300" height="600" src="./300x600/index.html" scrolling="no" marginwidth="0" marginheight="0"
+        frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+    </div>
+
   </div>
-
-  <div class="col2">
-    <iframe width="320" height="100" src="./320x100/index.html" scrolling="no" marginwidth="0" marginheight="0"
-      frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
-      sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
-
-    <iframe width="468" height="60" src="./468x60/index.html" scrolling="no" marginwidth="0" marginheight="0"
-      frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
-      sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
-
-    <iframe width="728" height="90" src="./728x90/index.html" scrolling="no" marginwidth="0" marginheight="0"
-      frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
-      sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
-  </div>
-
-  <div class="col3">
-    <iframe width="300" height="250" src="./300x250/index.html" scrolling="no" marginwidth="0" marginheight="0"
-      frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
-      sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
-
-    <iframe width="300" height="600" src="./300x600/index.html" scrolling="no" marginwidth="0" marginheight="0"
-      frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="e"
-      sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
-  </div>
-
 </body>
 
 </html>
