@@ -18,6 +18,22 @@ Acessivel em [makrosystem-advertising](https://rodrigofelipejr.github.io/makrosy
 - 728x90
 - 468x60
 - 970x90
-- 300x250      OK
+- 300x250    
 - 320x100
-- 300x600
+- 300x600 
+
+### Scripts
+
+script 1
+300x250.html
+300x600.html
+
+script 2
+320x100.html
+
+script 3
+468x60.html
+728x90.html
+970x90.html
+
+

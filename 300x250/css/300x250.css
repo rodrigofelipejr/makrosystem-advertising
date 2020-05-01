@@ -63,6 +63,7 @@ body {
 /* ===================================== */
 /* elemento 1 */
 /* ===================================== */
+
 #s1 p:last-of-type::before {
     position: absolute;
     content: attr(data-text);
@@ -91,6 +92,7 @@ body {
 /* ===================================== */
 /* elemento 2 */
 /* ===================================== */
+
 #s2 p:last-of-type {
     color: #00c08b;
 }
@@ -107,8 +109,8 @@ body {
     animation-fill-mode: forwards;
 }
 
-#s2.fillTextReverse p:last-of-type::before {
-    animation-name: fillTextReverse;
+#s2.fillText p:last-of-type::before {
+    animation-name: fillText;
     animation-duration: 750ms;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -124,24 +126,10 @@ body {
     animation-fill-mode: forwards;
 }
 
-#logo {
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-}
-
-#logo.logoToCenter {
-    animation-name: logoToCenter;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
-
 /* ===================================== */
 /* elemento 3 */
 /* ===================================== */
+
 #s3 {
     margin-top: 1em;
     align-self: center;
@@ -166,8 +154,28 @@ body {
 }
 
 /* ===================================== */
+/* logo */
+/* ===================================== */
+
+#logo {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+}
+
+#logo.logoToCenter {
+    animation-name: logoToCenter;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/* ===================================== */
 /* animations */
 /* ===================================== */
+
 .hideEnd {
     animation-name: hideEnd;
     animation-duration: 500ms;
@@ -198,22 +206,13 @@ body {
     }
 }
 
-@keyframes fillTextReverse {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
-}
-
 @keyframes logoToCenter {
     from {
         width: 50px;
         bottom: 1em;
     }
     to {
-        width: 75px;
+        width: 70px;
         bottom: 72%;
         transform: translate(-50%, 30%);
     }

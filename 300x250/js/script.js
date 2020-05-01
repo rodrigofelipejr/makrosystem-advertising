@@ -18,11 +18,11 @@ const animate4 = () => {
 }
 
 const animate5 = () => {
-    animateCSS('#s2', ['fillTextReverse'], animate6)
+    animateCSS('#s2', ['fillText'], animate6)
 }
 
 const animate6 = () => {
-    animateCSS('#s2', ['fillTextReverse', 'bounceOut2s'], animate7, ['hide'])
+    animateCSS('#s2', ['fillText', 'bounceOut2s'], animate7, ['hide'])
 }
 
 // step 3
