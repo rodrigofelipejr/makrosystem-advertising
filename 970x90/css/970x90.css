@@ -1,9 +1,10 @@
 /* ===================================== */
+
 /* default */
+
 /* ===================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -13,8 +14,7 @@
   color: #ffffff;
 }
 
-html,
-body {
+html, body {
   height: 100vh;
   width: 100vw;
   background-color: #002f87;
@@ -46,11 +46,12 @@ body {
 }
 
 /* ===================================== */
+
 /*  */
+
 /* ===================================== */
 
-#s1 p,
-#s2 p {
+#s1 p, #s2 p {
   text-transform: uppercase;
   overflow: hidden;
   white-space: nowrap;
@@ -59,13 +60,14 @@ body {
   text-align: center;
 }
 
-#s1 p:last-of-type,
-#s2 p:last-of-type {
+#s1 p:last-of-type, #s2 p:last-of-type {
   position: relative;
 }
 
 /* ===================================== */
+
 /* elemento 1 */
+
 /* ===================================== */
 
 #s1 p:last-of-type::before {
@@ -87,13 +89,10 @@ body {
   animation-fill-mode: forwards;
 }
 
-.bounceOutLeft2s {
-  -webkit-animation-name: bounceOutLeft;
-  animation-name: bounceOutLeft;
-}
-
 /* ===================================== */
+
 /* elemento 2 */
+
 /* ===================================== */
 
 #s2 p:last-of-type {
@@ -120,7 +119,7 @@ body {
   animation-delay: 500ms;
 }
 
-.bounceOut2s {
+.bounceOut1s {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
   -webkit-animation-name: bounceOut;
@@ -130,7 +129,9 @@ body {
 }
 
 /* ===================================== */
+
 /* elemento 3 */
+
 /* ===================================== */
 
 #s3 {
@@ -156,7 +157,9 @@ body {
 }
 
 /* ===================================== */
+
 /* logo */
+
 /* ===================================== */
 
 #logo {
@@ -165,7 +168,9 @@ body {
 }
 
 /* ===================================== */
+
 /* animations */
+
 /* ===================================== */
 
 .hideEnd {

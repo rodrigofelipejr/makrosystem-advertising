@@ -86,11 +86,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-.bounceOutLeft2s {
-  -webkit-animation-name: bounceOutLeft;
-  animation-name: bounceOutLeft;
-}
-
 /* ===================================== */
 /* elemento 2 */
 /* ===================================== */

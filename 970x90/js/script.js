@@ -21,7 +21,7 @@ const animate5 = () => {
 }
 
 const animate6 = () => {
-    animateCSS('#s2', ['fillText', 'bounceOut2s'], animate7, ['hide'])
+    animateCSS('#s2', ['fillText', 'bounceOut1s'], animate7, ['hide'])
 }
 
 // step 3

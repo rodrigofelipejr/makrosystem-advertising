@@ -80,12 +80,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-.bounceOutLeft2s {
-  -webkit-animation-name: bounceOutLeft;
-  animation-name: bounceOutLeft;
-  /* animation-delay: 750ms; */
-}
-
 /* ===================================== */
 /* elemento 2 */
 /* ===================================== */

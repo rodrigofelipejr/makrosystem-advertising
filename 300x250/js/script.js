@@ -22,7 +22,7 @@ const animate5 = () => {
 }
 
 const animate6 = () => {
-    animateCSS('#s2', ['fillText', 'bounceOut2s'], animate7, ['hide'])
+    animateCSS('#s2', ['fillText', 'bounceOut1s'], animate7, ['hide'])
 }
 
 // step 3
@@ -63,7 +63,6 @@ function animateCSS(element, animationName, callback, fixClass) {
 }
 
 function finish() {
-    console.log('end');
     const nodes = document.querySelectorAll('.wrapper > div, #logo, #link')
     setTimeout(function () {
         nodes.forEach(elem => {
@@ -75,5 +74,5 @@ function finish() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    animate1();
+    animate1()
 })
